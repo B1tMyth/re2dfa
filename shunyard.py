@@ -13,8 +13,8 @@ def augmented_regexp(verbose_regexp):
             output.append(".")
         else:
             output.append(elem)
-    output.append('.')
-    output.append('#')
+    output.append(".")
+    output.append("#")
     return output
 
 
@@ -44,15 +44,3 @@ def shunting_yard(
 
     rpn = list(output_queue.queue)
     return rpn
-
-
-# text = r"(a|b)*aab"
-# print(
-#     "".join(
-#         [
-#             str(x) if isinstance(x, regexpconv.CharWrapper) else x
-#             for x in shunting_yard(augmented_regexp(regexpconv.verbose_regexp(text)))
-#         ]
-#     )
-# )
-# print(shunting_yard(augmented_regexp(regexpconv.verbose_regexp(text))))
